@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(to right, #1a9c8b, #00c6d7);
+    --dark-grey: #333;
+    --light-grey: #f4f4f4;
+    --white: #fff;
+    --text-color: #555;
+    --button-bg: #00c6d7;
+    --button-hover: #1a9c8b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--dark-grey);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--button-bg);
+    color: var(--white);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: var(--button-hover);
+}
+
+.btn.small-btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    margin-right: 10px;
+}
+
+/* Header/Hero Section */
+.hero-section {
+    background: var(--white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: var(--dark-grey);
+}
+
+.hero-content h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.hero-content .highlight {
+    color: #00c6d7; /* Matches the gradient's lighter color */
+}
+
+/* About Section */
+.about-section {
+    background: var(--primary-gradient);
+    color: var(--white);
+    padding: 100px 0;
+    position: relative;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%); /* Diagonal top and bottom */
+    margin-top: -10vh; /* Overlap with hero */
+    padding-top: calc(100px + 10vh); /* Adjust padding for overlap */
+}
+
+.about-section .section-title {
+    color: var(--white);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: var(--light-grey);
+    padding: 100px 0;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.project-item:nth-child(even) {
+    flex-direction: column-reverse; /* For alternating layout on larger screens */
+}
+
+.project-description {
+    text-align: center;
+    max-width: 600px;
+}
+
+.project-description h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: var(--dark-grey);
+}
+
+.project-description p {
+    margin-bottom: 20px;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact-section {
+    background: var(--primary-gradient); /* Keeps the original gradient color */
+    color: var(--white);
+    padding: 100px 0;
+    position: relative;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    margin-bottom: -10vh;
+    padding-bottom: calc(100px + 10vh);
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-info {
+    max-width: 500px;
+}
+
+.contact-info .simple-prefix {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contact-info .section-title {
+    color: var(--white);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contact-info .get-in-touch {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f4f4f4; /* A lighter color on hover */
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    font-size: 1em;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.send-message-btn {
+    width: 100%;
+    background-color: var(--white);
+    color: var(--button-bg);
+    border: none;
+    padding: 15px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.send-message-btn:hover {
+    background-color: var(--light-grey);
+    color: var(--button-hover);
+}
+
+/* Responsive adjustments for desktop */
+@media (min-width: 768px) {
+    .contact-container {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .contact-info {
+        flex: 1;
+        text-align: left;
+    }
+
+    .contact-form {
+        flex: 1;
+    }
+    
+    .contact-info .section-title {
+        font-size: 2.5em;
+    }
+
+    .contact-info .get-in-touch {
+        font-size: 2em;
+    }
+    
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    text-align: center;
+    padding: 80px 20px 40px;
+    position: relative;
+    z-index: 1; /* Ensure it's above the contact section's clip-path overlap */
+}
+
+.footer .back-to-top {
+    position: absolute;
+    top: -25px; /* Adjust to sit on the edge of the footer */
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--button-bg);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer .back-to-top:hover {
+    background: var(--button-hover);
+}
+
+.footer .social-links {
+    margin-bottom: 30px;
+}
+
+.footer .social-links a {
+    color: var(--white);
+    font-size: 1.8em;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    color: var(--button-bg);
+}
+
+.footer p {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.footer .repo-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer .repo-buttons .btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .about-image {
+        flex: 1;
+    }
+
+    .about-text {
+        flex: 2;
+    }
+
+    .project-item {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .project-description,
+    .project-image {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-content h1 {
+        font-size: 4.5em;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+
+    .about-section {
+        clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 85%);
+    }
+    .contact-section {
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+/* --- Animations on Scroll --- */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* This class is added by JavaScript when the element is in view */
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation for the hero section on page load */
+@keyframes hero-fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h1,
+.hero-content h2,
+.hero-content .btn {
+    opacity: 0;
+    animation: hero-fade-in-up 0.8s ease-out forwards;
+}
+
+.hero-content h2 {
+    animation-delay: 0.3s; /* Delay the sub-heading slightly */
+}
+
+.hero-content .btn {
+    animation-delay: 0.6s; /* Delay the button even more */
+}
+
+/* --- Scroll Animations (from previous version, keep this) --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* This class is added by JavaScript when the element is in view */
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: var(--light-grey);
+    padding: 80px 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.skill-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item i {
+    font-size: 3em;
+    color: var(--button-bg);
+    margin-bottom: 15px;
+}
+
+.skill-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: var(--dark-grey);
+}
+
+.progress-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--primary-gradient);
+    border-radius: 5px;
+    transition: width 1.5s ease-in-out;
+}
